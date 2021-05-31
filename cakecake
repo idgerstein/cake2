@@ -1,0 +1,40 @@
+import random #imports needed function to choose random variable
+import sys #import needed function to exit
+def guess():
+    user_guess = int(input('Guess Again!:')) #a fun tool that will come in handy later (ignore for now)
+    if user_guess < random_list:
+        print('Nope, too low.')
+        guess()
+    elif user_guess > random_list:
+        print('Nope, too high.')
+        guess()
+    else:
+        user_guess == random_list
+        print('You got it!')
+        sys.exit() #exit program when user wins
+
+print('Welcome to the higher lower game, Bella!')
+#welcomes the user to the game
+low_bound = int(input('Enter the lower bound:'))
+#prompts user for a specific type of input storing in a variable
+high_bound = int(input('Enter the upper bound:'))
+#prompts user for a specific type of input storing in a variable
+random_list = ''
+#creates empty list to store number user will guess
+for i in range(1): #takes user input, and finds one random integer
+    n = random.randint(low_bound, high_bound) #stores the random integer in n
+    random_list.append(n) #adds number to the list above
+str_lb = str(low_bound)
+str_hb = str(high_bound) #takes the user inputs and converts them to strings in different variables so we can output them in the text prompt
+user_guess = int(input('Great, now guess a number between' + ' ' + str_lb + ' ' + 'and' + ' ' + str_hb + ':'))
+# prompts user for their guess between their designated numbers and stores it in a variable if user_guess < random_list[0]:
+if user_guess < random_list: # tests users guess against random variable
+    print('Nope, too low.')
+    guess() # sends user to the function at the top of the program to continue the loop until the user guesses correctly
+elif user_guess > random_list: # tests users guess against random variable
+    print('Nope, too high.')
+    guess() # sends user to the function at the top of the program to continue the loop until the user guesses correctly
+else:
+    user_guess == random_list # tests users guess to see if it is correct
+    print('You got it!')
+    sys.exit() # exits program when user wins
