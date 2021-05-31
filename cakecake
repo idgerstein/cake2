@@ -19,11 +19,10 @@ low_bound = int(input('Enter the lower bound:'))
 #prompts user for a specific type of input storing in a variable
 high_bound = int(input('Enter the upper bound:'))
 #prompts user for a specific type of input storing in a variable
-random_list = ''
+random_list = 0
 #creates empty list to store number user will guess
 for i in range(1): #takes user input, and finds one random integer
-    n = random.randint(low_bound, high_bound) #stores the random integer in n
-    random_list.append(n) #adds number to the list above
+   random_list = random.randint(low_bound, high_bound) #stores the random integer in n
 str_lb = str(low_bound)
 str_hb = str(high_bound) #takes the user inputs and converts them to strings in different variables so we can output them in the text prompt
 user_guess = int(input('Great, now guess a number between' + ' ' + str_lb + ' ' + 'and' + ' ' + str_hb + ':'))
